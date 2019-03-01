@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = "!"; // ضع البريفكس الخاص بك هنا
+const prefix = "$"; // ضع البريفكس الخاص بك هنا
 
 
 
@@ -38,17 +38,17 @@ client.on('message', message => {
     let command = messageArray[0];
     
     
-    if (command === `${prefix}help1`) {
+    if (command === `${prefix}help`) {
       message.channel.send(`**تم الارسال في الخاص**`);
 			let embed = new Discord.RichEmbed()
                 .setColor('RANDOM')
                 .addField('     **=-=-:: [ PANDA SERVER ] ::-=-=** ' ,'╔[❖═════════════════════❖]╗')
-				.addField(`**${prefix}bc1 | رسالة جماعية لجميع الاعضاء**` ,'**=-=-=-=-=-=-=-=-=-=-=**')
-				.addField(`**${prefix}bc2 | رسالة جماعية للاونلاين فقط**` ,'**=-=-=-=-=-=-=-=-=-=-=**')
-				.addField(`**${prefix}bc3 | رسالة جماعية للوفلاين فقط**` ,'**=-=-=-=-=-=-=-=-=-=-=**')
+				.addField(`**${prefix}bc | رسالة جماعية لجميع الاعضاء**` ,'**=-=-=-=-=-=-=-=-=-=-=**')
+				.addField(`**${prefix}bc1 | رسالة جماعية للاونلاين فقط**` ,'**=-=-=-=-=-=-=-=-=-=-=**')
+				.addField(`**${prefix}bc2 | رسالة جماعية للوفلاين فقط**` ,'**=-=-=-=-=-=-=-=-=-=-=**')
 				.addField(`**${prefix}bcrole | رسالة جماعية لرتبة معينه**` ,'**=-=-=-=-=-=-=-=-=-=-=**')
                 .addField('=-=- [ شكرا على استعمال البوت ] -=-= ' ,'╚[❖═════════════════════❖]╝')
-                .setFooter(`1_Ali_1#1467 rox`)
+                .setFooter(`Va | NoHaxJustAbdou`)
                 .setTimestamp()
 			
                 message.author.sendEmbed(embed)
@@ -56,9 +56,9 @@ client.on('message', message => {
 });
 
 
- client.on("message", message => {//bc1
+ client.on("message", message => {//bc
 
-            if (message.content.startsWith(prefix + "bc1")) {
+            if (message.content.startsWith(prefix + "bc")) {
                          if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' '); 
@@ -71,9 +71,9 @@ client.on('message', message => {
 });
 
 
-client.on("message", message => {//bc2
+client.on("message", message => {//bc1
 
-            if (message.content.startsWith(prefix + "bc2")) {
+            if (message.content.startsWith(prefix + "bc1")) {
                          if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' '); 
@@ -85,9 +85,9 @@ client.on("message", message => {//bc2
 };     
 });
 
-client.on("message", message => {//bc3
+client.on("message", message => {//bc2
 
-            if (message.content.startsWith(prefix + "bc3")) {
+            if (message.content.startsWith(prefix + "bc2")) {
                          if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' '); 
@@ -314,8 +314,7 @@ client.on("reachLimit", (limit)=> {
 
 
 
-const gamestats = [`!help1`,`PANDA SERVER bot`,`by 1_Ali_`,`PANDA SERVER
-`]
+const gamestats = [`$bc`,`- Destu.`,`by | NoHaxJustAbdou`,`- Destu.`]
 var index = 0
 var timer = 10 // الوقت بالثواني لتغير الستريمنق
 client.on("ready", ()=> {
